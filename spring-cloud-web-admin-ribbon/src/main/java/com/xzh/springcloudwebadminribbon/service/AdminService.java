@@ -11,7 +11,7 @@ public class AdminService {
     private RestTemplate restTemplate;
 
     /**
-     * 熔断
+     *
      * 在 Ribbon 调用方法上增加 @HystrixCommand 注解并指定 fallbackMethod 熔断方法
      *
      * @param message
@@ -25,4 +25,5 @@ public class AdminService {
     public String hiError(String message) {
         return "你发送的信息是 :" + message + " 但是请求失败了。。该信息为熔断返回的信息";
     }
+
 }
